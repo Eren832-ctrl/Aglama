@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almina Ağlama</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef3ff;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .face {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #fff7f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Gözler */
+  .eye {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #333;
+    border-radius: 50%;
+    top: 40px;
+  }
+  .eye.left { left: 30px; }
+  .eye.right { right: 30px; }
+
+  /* Gözyaşları */
+  .tear {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: #8ed0ff;
+    border-radius: 50%;
+    top: 55px;
+    animation: fall 2s infinite;
+    opacity: 0.8;
+  }
+  .tear.left { left: 30px; animation-delay: 0s; }
+  .tear.right { right: 30px; animation-delay: 0.5s; }
+
+  @keyframes fall {
+    0% { transform: translateY(0) scaleY(0.8); opacity: 0; }
+    10% { opacity: 1; transform: translateY(0) scaleY(1); }
+    80% { transform: translateY(60px) scaleY(1); opacity: 1; }
+    100% { transform: translateY(120px) scaleY(0.8); opacity: 0; }
+  }
+
+  /* Ağız */
+  .mouth {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border-bottom: 3px solid #333;
+    border-radius: 0 0 50% 50%;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+</head>
+<body>
+  <h1>Almina Ağlama 😢</h1>
+  <div class="face">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="tear left"></div>
+    <div class="tear right"></div>
+    <div class="mouth"></div>
+  </div>
+</body>
+</html>
